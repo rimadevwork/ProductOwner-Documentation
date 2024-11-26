@@ -101,8 +101,65 @@ The order processing system should be highly available, with uptime greater than
 ## 6. User Stories
 
 ### 6.1. User Stories for Cart Management
-US-1.1: As a user, I want to add products to my cart so that I can review them before checkout.
-US-1.2: As a user, I want to edit my cart so that I can change the quantities or remove items before proceeding to checkout.
+
+* US-1.1: Add Products to Cart
+As a user,
+I want to add products to my cart
+So that I can review and purchase multiple items later.
+
+Acceptance Criteria:
+The product page must have an "Add to Cart" button for each product.
+When the user clicks "Add to Cart," the product is added to the cart.
+The cart icon in the header updates to reflect the number of items in the cart.
+If the product is already in the cart, the system should allow the user to adjust the quantity.
+
+Expected Outcome:
+After adding a product to the cart, the user is shown an updated cart with the newly added product.
+Cart updates are reflected in real-time across all screens.
+
+* US-1.2: Edit Cart (Remove or Modify Items)
+As a user,
+I want to edit my cart by modifying quantities or removing items
+So that I can adjust my order before checkout.
+
+Acceptance Criteria:
+Each product in the cart has an option to increase or decrease the quantity.
+Users can click a "Remove" button next to any item to delete it from the cart.
+The cart total is automatically recalculated when items are modified or removed.
+
+Expected Outcome:
+The user can modify product quantities or remove products from the cart.
+The cart updates with the correct quantities and total price in real-time.
+
+### 6.2. User Stories for Promo Code Application
+US-2.1: Apply Promo Code
+As a user,
+I want to apply a promo code to my order
+So that I can receive a discount on my total purchase.
+
+Acceptance Criteria:
+The checkout page includes a field where users can enter a promo code.
+When the user enters a promo code, the system validates it.
+If valid, the discount is applied, and the new total is displayed.
+If the promo code is invalid or expired, the system should display an error message.
+
+Expected Outcome:
+The discount is correctly applied to the total amount, and the updated price is shown.
+The system notifies the user if the promo code is invalid.
+
+* US-2.2: Invalid Promo Code Handling
+As a user,
+I want to be informed when the promo code I entered is invalid or expired
+So that I can try a different code or proceed without it.
+
+Acceptance Criteria:
+If the promo code is invalid or expired, an error message appears.
+The error message should explain why the promo code is invalid (e.g., "Code has expired," "Invalid code").
+The user is still able to proceed to checkout without the promo code.
+
+Expected Outcome:
+The user is notified with a clear error message when a promo code is invalid or expired.
+The user can continue with the checkout process if they wish to do so.
 
 ### 6.2. User Stories for Promo Code Application
 US-2.1: As a user, I want to apply a promo code to my order to receive a discount on my total.
